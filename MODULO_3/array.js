@@ -66,7 +66,7 @@ frutas.forEach((fruta) => {
   | --------- | ---------------------------------------- |
   |  forEach  |   O que quero fazer com cada elemento?   |
   |  map      |   Como quero transformar cada elemento?  |
-  |  filter   |   Quai elementos quero manter?           |
+  |  filter   |   Quais elementos quero manter?           |
 
 */
 
