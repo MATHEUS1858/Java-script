@@ -29,7 +29,7 @@ async function buscarPedidos(usuarioId) {
         { id: 3, produto: "X-Catupiry" }
     ];
 
-    return todosOsPedidos.filter(todosOsPedidos => pedidos.id === usuarioId);
+    return todosOsPedidos.filter(pedido => pedido.id === usuarioId);
 }
 
 //Função excutar

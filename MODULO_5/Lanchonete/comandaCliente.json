@@ -1,0 +1,22 @@
+{
+  "estabelecimento": "McGerson",
+  "cliente": {
+    "id": 1,
+    "nome": "Asafe"
+  },
+  "itens": [
+    {
+      "item": "Batata Frita",
+      "quantidade": 2,
+      "precoUnitario": 12,
+      "subTotal": 24
+    },
+    {
+      "item": "Refrigerante",
+      "quantidade": 1,
+      "precoUnitario": 22,
+      "subTotal": 22
+    }
+  ],
+  "totalPagar": 46
+}
