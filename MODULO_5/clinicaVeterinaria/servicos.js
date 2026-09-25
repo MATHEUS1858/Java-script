@@ -1,28 +1,13 @@
 const servicos= [
-    {
-        id: 1,
-        nome: "Thor",
-        servico: "Tosa",
-        preco: 30
-    },
-    {
-        id: 2,
-        nome: "Pipoca",
-        servico: "Banho",
-        preco: 20
-    },
-    {
-        id: 3,
-        nome: "Luna",
-        servico: "Vacina Antirrábica",
-        preco: 80
-    }
+    {id: 1, servico: "Tosa", preco: 30},
+    {id: 2, servico: "Banho", preco: 20},
+    {id: 3, servico: "Vacina Antirrábica", preco: 80}
 ];
 
-async function buscarServico(id) {
+async function buscarServico(servicoId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const servico = servicos.find((servico) => servico.id === id);
+            const servico = servicos.find((servico) => servico.id === servicoId);
             if (servico) {
                 resolve(servico);
             }
@@ -32,3 +17,7 @@ async function buscarServico(id) {
         }, 1000);
     });
 }
+
+module.exports = {
+    buscarServico
+};

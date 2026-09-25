@@ -53,4 +53,4 @@ async function fecharConta(usuarioId) {
     }
 }
 
-fecharConta(1);
+fecharConta(3);

@@ -28,10 +28,10 @@ const atendimentos = [
     }
 ];
 
-async function buscarAtendimento(id) {
+async function buscarAtendimento(atendimentoId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const atendimento = atendimentos.filter(atendimento => atendimento.id === id);
+            const atendimento = atendimentos.filter(atendimento => atendimento.id === atendimentoId);
             if (atendimento.length > 0) {
                 resolve(atendimento);
             }

@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const { buscarAtendimento } = require("./atendimentos");
 const { buscarServico } = require("./servicos");
 
-async function calcularTotal(id) {
+async function fecharConta(id) {
     try {
         console.log("Buscando Atendimento...");
         const atendimento = await buscarAtendimento(id);
@@ -18,4 +18,4 @@ async function calcularTotal(id) {
     }
 }
 
-calcularTotal(2)
+fecharConta(2)
