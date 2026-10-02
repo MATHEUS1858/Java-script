@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nota Fiscal / Cupom</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <div class="cupom">
+    <!-- Cabeçalho -->
+    <div class="centralizado negrito" id="estabelecimento"></div>
+    <div class="centralizado" style="font-size: 11px;" id="data"></div>
+
+    <div class="separador"></div>
+
+    <!-- Dados do Cliente -->
+    <div style="font-size: 13px;">
+      CLIENTE: <span id="clienteNome"></span> (ID: <span id="clienteId"></span>)
+    </div>
+
+    <div class="separador"></div>
+
+    <!-- Tabela de Produtos -->
+    <table>
+      <thead>
+        <tr>
+          <th>ITEM</th>
+          <th class="centro">QTD</th>
+          <th class="direita">R$ UN</th>
+          <th class="direita">TOTAL</th>
+        </tr>
+      </thead>
+      <tbody id="listaItens">
+        <!-- O JavaScript vai preencher aqui -->
+      </tbody>
+    </table>
+
+    <div class="separador"></div>
+
+    <!-- Totais / Resumo -->
+    <div class="linha-resumo">
+      <span>QTD ITENS:</span>
+      <span id="totalItens"></span>
+    </div>
+    <div class="linha-resumo negrito" style="font-size: 14px;">
+      <span>TOTAL A PAGAR:</span>
+      <span id="totalPagar"></span>
+    </div>
+  </div>
+
+  <!-- 1. Importa os dados -->
+  <script src="contaCliente.js"></script>
+
+  <!-- 2. Lógica para desenhar os dados na tela -->
+  <script>
+    // Preenche cabeçalho e cliente
+    document.getElementById('estabelecimento').innerText = comanda.estabelecimento;
+    document.getElementById('data').innerText = comanda.dataEmissao;
+    document.getElementById('clienteNome').innerText = comanda.cliente.nome;
+    document.getElementById('clienteId').innerText = comanda.cliente.id;
+
+    // Preenche a lista de produtos dinamicamente
+    const tbody = document.getElementById('listaItens');
+    comanda.itens.forEach(function(item) {
+      const linha = `
+        <tr>
+          <td>${item.item}</td>
+          <td class="centro">${item.quantidade}</td>
+          <td class="direita">R$ ${item.precoUnitario.toFixed(2)}</td>
+          <td class="direita">R$ ${item.subtotal.toFixed(2)}</td>
+        </tr>
+      `;
+      tbody.innerHTML += linha;
+    });
+
+    // Preenche o resumo
+    document.getElementById('totalItens').innerText = comanda.resumo.totalItens;
+    document.getElementById('totalPagar').innerText = 'R$ ' + comanda.resumo.totalPagar.toFixed(2);
+  </script>
+</body>
+</html>

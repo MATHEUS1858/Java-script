@@ -1,0 +1,14 @@
+{
+  "name": "api-start",
+  "version": "1.0.0",
+  "description": "Api de testes com meus guerreiros, guerreiras e guerreires do 2B",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidorLivro.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
