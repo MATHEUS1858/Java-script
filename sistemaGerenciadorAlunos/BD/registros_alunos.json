@@ -1,0 +1,13 @@
+[
+{
+"id": 1,
+"matricula": "2026A01",
+"nome": "CARLOS EDUARDO SILVA",
+"turma": "3A",
+"data": "2026-10-23",
+"presente": true,
+"motivoSaida": "BANHEIRO",
+"minutosFora": 8,
+"alertaTempo": false
+}
+]

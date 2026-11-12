@@ -1,0 +1,14 @@
+{
+  "name": "biblioteca",
+  "version": "1.0.0",
+  "description": "Simulação sistema de biblioteca com Node.js",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matheus Vieira",
+  "license": "ISC",
+  "type": "module"
+}
